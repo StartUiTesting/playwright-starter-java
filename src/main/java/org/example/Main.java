@@ -5,9 +5,6 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
-import java.util.HashMap;
-import java.util.Map;
-
 
 public class Main {
 
@@ -15,12 +12,12 @@ public class Main {
 
         try (Playwright playwright = Playwright.create()) {
             BrowserType.LaunchOptions browserOptions = new BrowserType.LaunchOptions();
-            browserOptions.setHeadless(false);
+            browserOptions.setHeadless(true);
             Browser browser = playwright.chromium().launch(browserOptions);
 
             Page page = browser.newPage();
             page.navigate("http://playwright.dev");
             System.out.println(page.title());
         }
-        }
     }
+}

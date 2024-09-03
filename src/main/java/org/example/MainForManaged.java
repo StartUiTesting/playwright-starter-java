@@ -5,9 +5,6 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
-import java.util.HashMap;
-import java.util.Map;
-
 
 public class MainForManaged {
     private static final String TEMP_PATH = "C:/dev/temp";
@@ -26,5 +23,5 @@ public class MainForManaged {
             page.navigate("http://playwright.dev");
             System.out.println(page.title());
         }
-        }
     }
+}
