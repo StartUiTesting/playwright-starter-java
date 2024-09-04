@@ -46,3 +46,35 @@ If you are comfortable using and configuring a proxy, skip the following steps.
 * Set the environment variables `PLAYWRIGHT_BROWSERS_PATH=c:/dev/progs/playwright` and `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1`. 
   Restart your IDE or terminal to apply the changes.
 
+## Todos in the workshop
+
+### 1. Write some test cases
+
+- Edit the `ExampleTest.java` or create a new test.
+- Find right **Locators** (https://playwright.dev/java/docs/locators)
+- Use the Playwright´s Test generator to see **Locator** suggestions (https://playwright.dev/java/docs/codegen) <br>
+  `mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args=codegen` 
+  <br> on managed devices: `mvn exec:java -e -D playwright.driver.tmpdir=C:/dev/temp -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args=codegen`
+- Call **Actions** on the Locators (https://playwright.dev/java/docs/input)
+- Do **Assertions** on the Locators (https://playwright.dev/java/docs/test-assertions)
+- Run your tests with `mvn test` or from your IDE
+
+### 2. Try out the trace viewer (optional) 
+- Run the `TraceTest.java` to generate a trace file 
+- Open and analyze the trace file with the Playwright´s Trace Viewer https://trace.playwright.dev/
+- The trace viewer can also be started with the following maven command: <br>
+`mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="show-trace trace.zip"`
+- For further information see https://playwright.dev/java/docs/trace-viewer
+
+### 3. Try out the playwright inspector (optional)
+- Run the `InspectorTest.java` with the following command: 
+<br> `PWDEBUG=1 PLAYWRIGHT_JAVA_SRC=src/test/java mvn test -Dtest=org.example.InspectorTest`
+- Step through the test 
+- For further information see https://playwright.dev/java/docs/trace-viewer-intro
+### 4. Use page object models
+
+For better maintainability, enhance your test case design with the usage of page object models (POM, https://playwright.dev/java/docs/pom).
+
+- Create a new POM in the `org.poms` package and define Locators (and functions for repetitive tasks).
+- Import the new POM into your test case and reuse the Locators (and functions) from there.
+
