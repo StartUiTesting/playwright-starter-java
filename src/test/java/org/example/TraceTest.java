@@ -17,7 +17,6 @@ class TraceTest {
 	 * After executing this test, a trace.zip file will be created in the project root directory.
 	 * Drag and drop the created trace.zip file to the Playwright trace viewer https://trace.playwright.dev/
 	 * or open it with the following command:
-	 * or open it with the following command:
 	 * mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="show-trace trace.zip"
 	 *
 	 * For more information visit https://playwright.dev/java/docs/trace-viewer-intro
