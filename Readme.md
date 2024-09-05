@@ -80,9 +80,9 @@ For better maintainability, enhance your test case design with the usage of page
 - Create a new POM in the `org.poms` package and define Locators (and functions for repetitive tasks).
 - Import the new POM into your test case and reuse the Locators (and functions) from there.
 
-### Troubleshooting
+## Troubleshooting
 
-#### Managed devices
+### Managed devices
 Most issues occur on managed devices, where the browser download is blocked and the group policy prevents launching from the temp dir.
 - If the browser download is blocked, check your environment variables or use a developer proxy (see [Managed Devices](#managed-devices))
 - If the test are blocked by the group policy check that the folder `C:\dev\temp` exists and is accessible. Furthermore, check that the system property `playwright.driver.tmpdir` is set correctly.
