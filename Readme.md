@@ -32,7 +32,7 @@ If the example code is executing and the test code generator is launching you ar
 #### Creating a temp dir for playwright
 Playwright for java uses a temp directory to launch the tests, which is blocked if it is not in `c:\dev`
 * Create the temp dir `C:\dev\temp`
-* Set java system property `playwright.driver.tmpdir`, e.g. add following string to vm options in your launch configs: `-Dplaywright.driver.tmpdir=C:\dev\temp`.
+* Set java system property `playwright.driver.tmpdir`, e.g. add following string to vm options in your launch configs: <br> `-Dplaywright.driver.tmpdir=C:\dev\temp`.
   Alternatively you can set it in code via `System.setProperty("playwright.driver.tmpdir", C:\dev\temp)`, see [MainForManaged.java](src/main/java/org/example/MainForManaged.java) for an example.
 * Add the system property `playwright.driver.tmpdir=C:\dev\temp` to your playwright related maven commands, e.g. `mvn test -D playwright.driver.tmpdir=C:\dev\temp`
 
